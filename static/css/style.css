@@ -3,3 +3,14 @@ body {
     color: whitesmoke;
     padding: 25px;
 }
+
+input {
+    height: 25px;
+    width: 75px;
+    background-color: transparent;
+}
+
+input#send {
+    background-color: rgb(27, 164, 255);
+    color: white;
+}
