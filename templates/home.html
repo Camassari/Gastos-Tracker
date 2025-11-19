@@ -5,7 +5,13 @@
 {% endblock %}
 
 {% block content %}
-    <input type="text" placeholder="Dispesa">
-    <input type="text" placeholder="Valor">
-    <input id="send" type="submit" value="Enviar">
+    {% for despesa in despesas %}
+        {{ despesa.nome }} {{ despesa.valor }}
+    {% endfor %}
+
+    <form action="{{ url_for('add') }}" method="post">
+        <input type="text" name="despesa" placeholder="Despesa">
+        <input type="text" name="valor" placeholder="Valor">
+        <input id="send" type="submit" value="Enviar">
+    </form>
 {% endblock %}
